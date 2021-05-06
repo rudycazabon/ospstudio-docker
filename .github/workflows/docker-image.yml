@@ -23,4 +23,5 @@ jobs:
     - name: Build the Docker Image
         docker build . --file Dockerfile --tag rjc/ubuntu:$(date +%s)
     - name: Docker Push
-      run: docker push ${{secrets.DOCKER_USER}}/ospstudio-docker
+      run: |
+        docker push ${{secrets.DOCKER_USER}}/ospstudio-docker
