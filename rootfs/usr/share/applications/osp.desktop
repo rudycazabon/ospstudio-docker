@@ -1,0 +1,8 @@
+[Desktop Entry]
+Version=1.0
+Name=OSPRay Studio
+Exec=/usr/local/bin/osp-start.sh
+StartupNotify=true
+Terminal=false
+Icon=Terminal
+Type=Application
