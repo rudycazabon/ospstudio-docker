@@ -19,7 +19,7 @@ jobs:
         docker login -u rudycazabon -p 7394f3a3-29e3-4af7-8942-26820dfe32bf
     - name: Build the Docker Image
       run: |
-        docker build . --file Dockerfile --tag ospstudio-docker
+        docker build . --file Dockerfile --tag ospstudio-docker:latest
     - name: Docker Push
       run: |
-        docker push ${{secrets.DOCKER_USER}}/ospstudio-docker
+        docker push ospstudio-docker:latest
