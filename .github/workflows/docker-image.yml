@@ -16,7 +16,7 @@ jobs:
     - uses: actions/checkout@v2
     - name: Docker login
       run: |
-        docker login -u ${{secrets.DOCKER_USER}} -p ${{secrets.DOCKER_PASSWORD}}
+        docker login -u rudycazabon -p 7394f3a3-29e3-4af7-8942-26820dfe32bf
     - name: Build the Docker Image
       run: |
         docker build . --file Dockerfile --tag rjc/ubuntu:$(date +%s)
