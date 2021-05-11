@@ -57,12 +57,12 @@ ADD https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini /bin/
 RUN chmod +x /bin/tini
 
 # ffmpeg
-RUN apt update \
-    && apt install -y --no-install-recommends --allow-unauthenticated \
-        ffmpeg \
-    && rm -rf /var/lib/apt/lists/* \
-    && mkdir /usr/local/ffmpeg \
-    && ln -s /usr/bin/ffmpeg /usr/local/ffmpeg/ffmpeg
+# RUN apt update \
+#    && apt install -y --no-install-recommends --allow-unauthenticated \
+#        ffmpeg \
+#    && rm -rf /var/lib/apt/lists/* \
+#    && mkdir /usr/local/ffmpeg \
+#    && ln -s /usr/bin/ffmpeg /usr/local/ffmpeg/ffmpeg
 
 # python library
 COPY rootfs/usr/local/lib/web/backend/requirements.txt /tmp/
